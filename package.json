@@ -1,0 +1,33 @@
+{
+  "name": "graphql-ts-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TS,Server\" -c \"blue.bold,green.bold\" \"npm run build:watch\" \"npm run serve\" ",
+    "serve": "nodemon dist/server/index.js",
+    "build:watch": "tsc -w"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "graphql": "^0.10.3",
+    "graphql-server-koa": "^1.0.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "next",
+    "koa-router": "next"
+  },
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.34",
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-router": "^7.0.22",
+    "@types/node": "^8.0.7",
+    "concurrently": "^3.5.0",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "ts-jest": "^20.0.6",
+    "tslint": "^5.4.3",
+    "tslint-config-standard": "^6.0.1",
+    "typescript": "next"
+  }
+}
